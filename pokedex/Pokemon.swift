@@ -169,7 +169,8 @@ class Pokemon {
                     self._type = ""
                 }
                 
-                if let descArr = dict["decriptions"] as? [Dictionary<String, String>], descArr.count > 0 {
+                
+                if let descArr = dict["descriptions"] as? [Dictionary<String, String>], descArr.count > 0 {
                     
                     if let url = descArr[0]["resource_uri"] {
                         
@@ -184,6 +185,7 @@ class Pokemon {
                                     self._description = newDescription
                                     
                                     print(newDescription)
+                                    print(descURL)
                                 }
                             }
                             completed()
